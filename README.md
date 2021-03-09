@@ -1,4 +1,4 @@
-# docker_mysql
+# docker_db
 mysql 설치 관련 명령어
 
 ### 기본 컨테이너 실행 명령어
