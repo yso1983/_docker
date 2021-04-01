@@ -8,7 +8,7 @@ services:           # service 목록을 정의합니다.
       MONGO_INITDB_ROOT_PASSWORD: 123456
     volumes:        # container -> local로 mount할 수 있습니다.
       - type: bind 
-        source: home/dbdata/mongg/db # local 경로
+        source: /home/dbdata/mong0/db # local 경로
         target: /data/db  # container 내부에서의 경로
     container_name: "mongodb" # container의 name을 정의합니다.
     ports:                # service port를 정의합니다.
