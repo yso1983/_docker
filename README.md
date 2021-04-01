@@ -26,4 +26,18 @@ FLUSH PRIVILEGES;
 ```
 > mongo -u "root" -p
 > Enter password:
+
+use admin
+db.createUser(
+  {
+    user: "yso1983",
+    pwd: "123456",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }, { role: "readWrite", db: "lotto" }]
+  }
+)
+
+db.updateUser("yso1983",
+  { roles: [ { role: "readWrite", db: "lotto" } ] }
+)
+    
 ```
