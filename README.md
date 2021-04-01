@@ -19,3 +19,11 @@ CREATE USER 'yso1983'@'%' IDENTIFIED BY '123456';
 GRANT ALL PRIVILEGES ON *.* TO 'yso1983'@'%'; 
 FLUSH PRIVILEGES;
 ```
+
+
+### MongoDB 
+
+```
+> mongo -u "root" -p
+> Enter password:
+```
