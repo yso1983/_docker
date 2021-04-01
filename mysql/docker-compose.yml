@@ -12,3 +12,5 @@ services: #이 항목 밑에 실행하려는 컨테이너 들을 정의
       - --collation-server=utf8mb4_unicode_ci
     volumes:
       - /Users/yongsoo/dbdata/mysql_data:/var/lib/mysql # -v 옵션 (다렉토리 마운트 설정)
+      #- /home/dbdata/mysql_data:/var/lib/mysql #ubuntu
+      #- /home/dockerhome/mysql/etc/my.cnf:/etc/my.cnf  #ubuntu
