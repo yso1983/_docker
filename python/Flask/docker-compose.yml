@@ -4,9 +4,9 @@ services:
         build:
             context: . #./app
             dockerfile: Dockerfile
-            container_name: flack
             args:
                 env: "development"
+        container_name: flack_web
         ports:
             - "5000:5000" # 접근 포트 설정 (컨테이너 외부:컨테이너 내부)
         volumes:
