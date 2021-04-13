@@ -2,5 +2,7 @@ https://medium.com/@feedbotstar/python-flask-%EB%A1%9C-%EA%B0%84%EB%8B%A8%ED%95%
 
 mysql host는 도커 내부 ip로 확인
 
-> docker network list \n
-> docker network inspect {NETWORK ID}        
+```
+% docker network list
+% docker network inspect {NETWORK ID}        
+```
