@@ -1,0 +1,32 @@
+version: "3"
+services:
+  django:
+    build : 
+      context: . 
+      dockerfile : Dockerfile
+    image: django
+    container_name: django
+    volumes: 
+      - .:/app
+    working_dir: /app
+    command: > 
+      bash -c "python3 manage.py runserver 0:8000"
+    #  bash -c "django-admin startproject mysite .
+    #  && python3 manage.py runserver  "
+    ports: 
+      - "8000:8000"
+    depends_on: 
+      - db
+  db: # 서비스 명
+    image: postgres:13 # 사용할 이미지
+    container_name: pgsql # 컨테이너 이름 설정
+    ports:
+      - "5432:5432" # 접근 포트 설정 (컨테이너 외부:컨테이너 내부)
+    environment: # -e 옵션
+      POSTGRES_DB: "django"
+      POSTGRES_USER: "yso1983"
+      POSTGRES_PASSWORD: "123456"  # 패스워드 설정 옵션
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+      #POSTGRES_INITDB_ARGS: " — data-checksums -E utf8 — no-locale" 
+    volumes:
+      - ./pgsql_data:/var/lib/postgresql/data # -v 옵션 (다렉토리 마운트 설정)
