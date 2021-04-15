@@ -14,3 +14,15 @@ ALLOWED_HOSTS = ['127.0.0.1']
 bash -c "python3 manage.py startapp polls"
 python3 manage.py makemigrations polls
 ```
+
+#앱 설치 관련
+- 참고 django-polls 폴더
+
+1.설치
+```
+python -m pip install --user django-polls/dist/django-polls-0.1.tar.gz
+```
+2.삭제
+```
+python -m pip uninstall django-polls
+```
