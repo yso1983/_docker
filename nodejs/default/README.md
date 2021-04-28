@@ -1,4 +1,4 @@
-강좌 : https://velopert.com/332
+강좌 : https://velopert.com/node-js-tutorials
 
 docker run -dt --mount type=bind,source=`pwd`,target=/app \
 -p 3000:3000 -h node --name node node:latest
