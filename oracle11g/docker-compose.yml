@@ -1,0 +1,9 @@
+version: '2'
+services:
+  oracle11g:
+    image: jaspeen/oracle-xe-11g
+    container_name: oracle11g
+    volumes:
+      - /Users/yongsoo/dbdata/oracle_data:/u01/app/oracle jaspeen/oracle-xe-11g
+    ports:
+      - 1521:1521

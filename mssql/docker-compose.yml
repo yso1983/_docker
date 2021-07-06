@@ -1,0 +1,15 @@
+version: '3.1' 
+
+services: 
+  # mssql db 서비스 정의 
+  db: 
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: ms_sql
+    restart: always 
+    environment: 
+      ACCEPT_EULA: Y 
+      SA_PASSWORD: 1q2w3e34r!
+    ports: 
+      - "1433:1433" 
+    volumes: 
+      - /Users/yongsoo/dbdata/mssql:/var/opt/mssql
